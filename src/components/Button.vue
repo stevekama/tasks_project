@@ -16,6 +16,11 @@ export default {
             default: 'green',
             required: true
         }
+    },
+    methods: {
+        onClick() {
+            console.log('click');
+        }
     }
 };
 </script>

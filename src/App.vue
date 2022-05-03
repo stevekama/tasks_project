@@ -1,27 +1,37 @@
 <template>
   <div class="container">
     <Header title="Tasks Tracker" />
+    <Tasks @delete-task="deleteTask" v-bind:tasks="tasks" />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
+import Tasks from './components/Tasks.vue';
 
 export default {
   name: "App",
   components: {
-    Header
+    Header,
+    Tasks
   },
   data() {
     return {
       tasks: []
     };
-  }, 
+  },
+  methods: {
+    deleteTask(id) {
+      if(confirm('Are you sure?')) {
+        this.tasks = this.tasks.filter(task => task.id !== id);
+      }
+    }
+  },
   created() {
     this.tasks = [
       {
         id: 1,
-        text: "Doctors Appouintment",
+        text: "Doctors Appointment",
         day: "March 20, 2020 at 10:00 AM",
         reminder: true
       },

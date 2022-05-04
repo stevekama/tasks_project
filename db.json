@@ -16,13 +16,13 @@
       "id": 302433,
       "text": "Take out the trash",
       "day": "March 10th at 3:00PM",
-      "reminder": false
+      "reminder": true
     },
     {
-      "id": 703695,
-      "text": "Dentist Apointment",
-      "day": "March 14th at 11:00AM",
-      "reminder": true
+      "text": "Meet with client",
+      "day": "April 4th at 07:00AM",
+      "reminder": true,
+      "id": 703696
     }
   ]
 }
